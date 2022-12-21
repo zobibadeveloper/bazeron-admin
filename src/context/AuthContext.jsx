@@ -124,8 +124,7 @@ export const AuthProvider = (props) => {
 
   const logout = async () => {
     try {
-      const response = await axios.post('/admin/logout');
-      console.log(response);
+      await axios.post('/admin/logout');
       dispatch({ type: 'LOGOUT' });
     } catch (err) {
       console.error(err);

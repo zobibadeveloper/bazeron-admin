@@ -3,3 +3,17 @@
 .min-height-80 {
   min-height: 80vh;
 }
+
+.text-small {
+  font-size: 0.7rem;
+}
+
+.table > :not(caption) > * > * {
+  padding: 0rem 0.3rem !important;
+}
+
+.max-width-100 {
+  max-width: 100px;
+  height: auto;
+  object-fit: contain;
+}

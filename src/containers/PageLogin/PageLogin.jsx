@@ -5,8 +5,6 @@ export default function PageLogin() {
   const [{ email, password }, setForm] = useState({ email: "", password: "" });
   const {login, isAuthenticated} = useAuth();
 
-  console.log(isAuthenticated)
-
   const handleChange = (e) => {
     setForm({ email, password, [e.target.id]: e.target.value });
   }
