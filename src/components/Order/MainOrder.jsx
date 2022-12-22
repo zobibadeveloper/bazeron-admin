@@ -6,11 +6,11 @@ import Order from "./Order";
 export default function MainOrder({ mainOrder }) {
 
   return (
-    <div className="border rounded mx-2 bg-white overflow-hidden card text-small w-100 shadow-lg" style={{ maxWidth: "800px" }}>
+    <div className="border border-3 border-secondary rounded mx-2 bg-white overflow-hidden card text-small w-100 shadow-lg" style={{ maxWidth: "800px" }}>
       <div className="p-2 pb-0">
         <MainOrderHeader mainOrder={mainOrder} />
       </div>
-      <div className="card-body p-2 pt-0 d-flex flex-column gap-2 border">
+      <div className="card-body p-2 pt-0 d-flex flex-column gap-2">
         {mainOrder.orders.map((product) => {
           return (
             <Order product={product} key={product._id} />

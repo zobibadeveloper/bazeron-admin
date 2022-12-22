@@ -5,13 +5,13 @@ import MainOrder from '../../components/Order/MainOrder';
 import useOrder from '../../hooks/useOrder';
 
 export default function PageHome() {
-  const { data, fetchData, hasMore } = useOrder();
+  const { data, fetchData, hasMore, count } = useOrder();
 
   return (
     <InfiniteScroll
       dataLength={data.length}
       next={fetchData}
-      hasMore={hasMore}
+      hasMore={data.length !== count && hasMore}
       endMessage={
         <p style={{ textAlign: "center" }}>
           <b>"Bitti"</b>
