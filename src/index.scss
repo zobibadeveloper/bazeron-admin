@@ -17,3 +17,24 @@
   height: auto;
   object-fit: contain;
 }
+
+.btn-confirm {
+  background: #059669 !important;
+}
+
+.btn-confirm-accent {
+  background: #059669 !important;
+}
+
+.btn-confirm-alert {
+  background: #be123c !important;
+}
+
+.btn-confirm:hover {
+  transform: scale(1.03);
+  translate: 0.3s ease-in-out;
+}
+
+.btn-confirm:active {
+  transform: scale(0.97);
+}

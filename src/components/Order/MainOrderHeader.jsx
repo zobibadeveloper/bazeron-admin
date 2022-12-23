@@ -1,10 +1,11 @@
 import currency from 'currency.js';
 import React from 'react'
 import Tr from '../Tr';
+import { getCityById } from '../../constants/cities';
 
 export default function MainOrderHeader({ mainOrder }) {
   const { name, city, phone } = mainOrder.address;
-  const { totalQuantity, createdAt, _id } = mainOrder;
+  const { createdAt, _id } = mainOrder;
   // date format as DD/MM/YYYY HH:MM
   let totalPrice = 0;
   mainOrder.orders.forEach((product) => {
@@ -20,7 +21,7 @@ export default function MainOrderHeader({ mainOrder }) {
         <Tr title={"Üye"} value={name} />
         <Tr title={"Telefon"} value={phone} />
         <Tr title={"Toplam"} value={totalPrice} />
-        <Tr title={"Adet"} value={totalQuantity} />
+        <Tr title={"Şehir"} value={getCityById(city)["name_tr"]} />
         <Tr title={"Tarih"} value={dateStr} />
       </tbody>
     </table>

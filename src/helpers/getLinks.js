@@ -1,16 +1,12 @@
 const getProductLink = (key, id) => {
   if (key === "n" || key === 2) {
-    return `/product-detail/184569${id}-n`;
-  } else {
-    return `/product-detail/184569${id}-n`;
+    return `https://bazeron.com/product-detail/184569${id}-n`;
   }
 };
 
-const getApiLink = (key, id, prettyUrl = false) => {
+const getApiLink = (key, prettyUrl = false) => {
   if (key === "n" || key === 2) {
-    return `https://api.n11.com/ws/ProductService.wsdl`;
-  } else {
-    return `https://api.n11.com/ws/ProductService.wsdl`;
+    return `https://www.needion.com/ilanlar/${prettyUrl}`;
   }
 };
 

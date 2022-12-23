@@ -18,15 +18,15 @@ class Buttons {
   }
 
   getButtons(status) {
-    return this.buttons[this.role][status];
+    return this.buttons[this.role][status] ? this.buttons[this.role][status] : [];
   }
 
   getButton(status, name) {
     return this.buttons[this.role][status].find((button) => button.name === name);
   }
 
-  _onApprove({ _id, status, ...rest }) {
-    return this.axios.post("/admin/order/approve", { _id, status, ...rest });
+  _onApprove({ _id, ...rest }) {
+    return this.axios.patch("/admin/order/approve", { _id, ...rest });
   }
 
   _changeStatus({ status, _id }) {
