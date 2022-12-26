@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
-import ButtonsClass from "../constants/buttons";
+import ButtonsClass from "../constants/Buttons";
 import axiosIns from "../utils/axios";
 
 const OrderContext = createContext();

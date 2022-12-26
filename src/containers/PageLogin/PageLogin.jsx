@@ -17,7 +17,7 @@ export default function PageLogin() {
   return (
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-md-6 offset-md-3 mt-4">
+        <div className="col-md-6 mt-4">
           <div className='d-flex justify-content-center mt-4'>
             <img src="/images/logo.png" className="img-fluid profile-image-pic my-3 mt-5"
               width="200px" alt="profile" />

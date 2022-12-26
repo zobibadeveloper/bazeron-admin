@@ -8,9 +8,15 @@ class Buttons {
     this.axios = axiosIns;
     this.buttons = {
       "ADMIN": {
-        1: [
+        "1": [
           { name: "Onayla", color: "primary", checkForm: true, link: false, onClick: this._onApprove },
           { name: "Satın Al", color: "success", checkForm: false, link: true, onClick: (link) => window.open(link, '_blank') },
+          { name: "Tedarik Edilemedi", color: "danger", checkForm: false, link: false, onClick: (_id) => this._changeStatus({ status: 9, _id }) },
+        ],
+        "2": [
+          { name: "Güncelle", color: "primary", checkForm: true, link: false, onClick: this._onApprove },
+          { name: "Taşımaya Al", color: "success", checkForm: false, link: false, onClick: (_id) => this._changeStatus({ status: 11, _id }) },
+          { name: "Stoğa Al", color: "secondary", checkForm: false, link: false, onClick: (_id) => this._changeStatus({ status: 20, _id }) },
           { name: "Tedarik Edilemedi", color: "danger", checkForm: false, link: false, onClick: (_id) => this._changeStatus({ status: 9, _id }) },
         ]
       }
